@@ -2,6 +2,8 @@ from jinja2 import Environment, PackageLoader, select_autoescape
 import tomllib
 import json
 
+KPM_MANIFEST_VERSION = 1
+
 env = Environment(
     loader=PackageLoader("build_index"),
     autoescape=select_autoescape()
@@ -14,6 +16,10 @@ with open("./index_builder/config.toml", 'rb') as file:
 
 with open("./manifest.json") as file:
     manifest = json.loads(file.read())
+
+if (manifest["manifest_version"] != KPM_MANIFEST_VERSION):
+    print(f"Expected manifest version {KPM_MANIFEST_VERSION}, got {manifest['manifest_version']}")
+    exit(1)
 
 assert(not ' ' in manifest["id"])
 assert(manifest["id"].isalnum())
