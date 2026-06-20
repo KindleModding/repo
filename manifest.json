@@ -3,5 +3,25 @@
   "id": "kindlemodding",
   "name": "Official KMC Repo",
   "description": "The official KMC repo",
-  "packages": {}
+  "packages": {
+    "koreader": {
+      "name": "KOReader",
+      "author": "KOReader Team",
+      "description": "An ebook reader application supporting PDF, DjVu, EPUB, FB2 and many more formats, running on Cervantes, Kindle, Kobo, PocketBook and Android devices",
+      "artifacts": [
+        {
+          "url": "packages/koreader/artifacts/koreader_2026.3.0_kindlehf.kpkg",
+          "version": [
+            2026,
+            3,
+            0
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf"
+          ]
+        }
+      ]
+    }
+  }
 }
