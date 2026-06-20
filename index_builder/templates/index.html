@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ manifest["name"] }}</title>
+    <style>
+        html, body
+        {
+            padding: 0;
+            margin: 0;
+        }
+
+        body
+        {
+            background-color: #1A1A1A;
+            color: #FFF;
+            font-family: sans-serif;
+            padding: 0 1em;
+            padding-top: 0;
+        }
+
+        #title, #description
+        {
+            padding: 0;
+            margin: 0em;
+        }
+
+        #title
+        {
+            font-size: 2em;
+            margin: 0.5em 0;
+        }
+
+        #description
+        {
+            margin-top: 0 !important;
+        }
+
+        #title
+        {
+            margin-bottom: 0 !important;
+        }
+
+        code
+        {
+            font-family: "JetBrains Mono", "Fira Code", "SF Mono", Consolas, monospace;
+            background-color: #171717 !important;
+            padding: 0.25em 0.6em;
+            border-radius: 4px;
+            font-size: 0.88em;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            border: 1px solid #333333;
+        }
+
+        .package, .box
+        {
+            border: 1px solid #333333;
+            background-color: #252525;
+            padding: 0.5em 1em;
+            margin: 1.5em;
+        }
+
+        .package > p
+        {
+            margin: 0;
+        }
+
+        .package_name
+        {
+            font-size: 1.25em;
+        }
+
+        .package_author
+        {
+            color: #939393;
+            font-size: 0.75em;
+            margin-left: 0.5em;
+        }
+
+        .package_description
+        {
+            font-size: 0.9em;
+            margin-top: 0.5em !important;
+        }
+
+        .package_install_command, .repo_add_command
+        {
+            display: block;
+            margin-top: 0.5em !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="top_bar">
+        <p id="title">{{ manifest["name"] }}</p>
+        <p id="description">{{ manifest["description"] }}</p>
+        {% if show_url %}
+            <code class="repo_add_command">
+                ;kpm add-repo {{ url }}
+            </code>
+        {% endif %}
+    </div>
+
+    {% if is_empty %}
+        <h2>This repository is empty</h2>
+    {% else %}
+        <h2>Packages</h2>
+        {% for package_id in package_ids %}
+            <div class="package">
+                <p class="package_name">{{ manifest["packages"][package_id]["name"] }}</p>
+                <p class="package_author">By: {{  manifest["packages"][package_id]["author"] }}</p>
+                <p class="package_description">{{ manifest["packages"][package_id]["description"] }}</p>
+                <code class="package_install_command">
+                    ;kpm install {{ package_id }}
+                </code>
+            </div>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
