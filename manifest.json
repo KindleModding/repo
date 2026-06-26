@@ -29,7 +29,7 @@
       "description": "The Kindle Package Manager allows you to install and uninstall apps and programs easily on your Kindle",
       "artifacts": [
         {
-          "url": "packages/kpm/artifacts/kpm_0.2.0_kindlehf-kindlepw2.kpkg",
+          "url": "packages/kpm/artifacts/kpm_0.2.0_kindlehf-kindlepw2_compat.kpkg",
           "version": [
             0,
             2,
