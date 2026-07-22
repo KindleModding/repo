@@ -91,6 +91,25 @@
           ]
         }
       ]
+    },
+    "kompanion": {
+      "name": "KOmpanion",
+      "author": "Marek",
+      "description": "This package allows the kindle UI to index epub files and open them in KOReader",
+      "artifacts": [
+        {
+          "url": "packages/kompanion/kompanion_0.1.1_kindlehf.kpkg",
+          "version": [
+            0,
+            1,
+            1
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf"
+          ]
+        }
+      ]
     }
   }
 }
