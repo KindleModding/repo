@@ -144,6 +144,18 @@
           "supported_platforms": [
             "kindlehf"
           ]
+        },
+        {
+          "url": "packages/kompanion/kompanion_0.1.4_kindlehf.kpkg",
+          "version": [
+            0,
+            1,
+            4
+          ],
+          "dependencies": [],
+          "supported_platforms": [
+            "kindlehf"
+          ]
         }
       ]
     }
