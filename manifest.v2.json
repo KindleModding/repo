@@ -193,6 +193,19 @@
                         "kindlehf",
                         "kindlepw2"
                     ]
+                },
+                {
+                    "url": "packages/kompanion/kompanion_0.1.6_kindlehf_kindlepw2.kpkg",
+                    "version": [
+                        0,
+                        1,
+                        6
+                    ],
+                    "dependencies": [],
+                    "supported_platforms": [
+                        "kindlehf",
+                        "kindlepw2"
+                    ]
                 }
             ]
         }
