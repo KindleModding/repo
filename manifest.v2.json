@@ -4,6 +4,19 @@
   "name": "Official KMC Repo",
   "description": "The official KMC repo",
   "packages": {
+    "dropbear-ssh": {
+      "name": "Dropbear SSH",
+      "author": "Akshay",
+      "description": "On-demand SSH/SFTP server (dropbear, repackaged from notmarek/kindle-usbnetlite) over your existing WiFi — no USB networking needed. A random password is generated on install and printed in the KPM log; set your own any time by editing /mnt/us/usbnetlite/etc/ssh_password and restarting the server. Verified working end-to-end (install, launch, real SSH session, survives upgrade/downgrade) on Kindle PaperWhite 4, kernel 4.1.x.",
+      "artifacts": [
+        {
+          "url": "packages/dropbear-ssh/artifacts/dropbear-ssh_0.1.0_kindlehf.kpkg",
+          "version": [0, 1, 0],
+          "dependencies": [],
+          "supported_platforms": ["kindlehf"]
+        }
+      ]
+    },
     "koreader": {
       "name": "KOReader",
       "author": "KOReader Team",
