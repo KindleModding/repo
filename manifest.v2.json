@@ -4,6 +4,19 @@
   "name": "Official KMC Repo",
   "description": "The official KMC repo",
   "packages": {
+    "kherdr": {
+      "name": "kherdr",
+      "author": "theblazehen",
+      "description": "Native Kindle terminal client for local and remote Herdr sessions.",
+      "artifacts": [
+        {
+          "url": "packages/kherdr/artifacts/kherdr_0.1.0_kindlehf.kpkg",
+          "version": [0, 1, 0],
+          "dependencies": [],
+          "supported_platforms": ["kindlehf"]
+        }
+      ]
+    },
     "koreader": {
       "name": "KOReader",
       "author": "KOReader Team",
