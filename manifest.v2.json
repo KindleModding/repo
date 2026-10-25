@@ -69,6 +69,12 @@
           "version": [0, 2, 1],
           "dependencies": [],
           "supported_platforms": ["kindlehf", "kindlepw2"]
+        },
+        {
+            "url": "packages/kpm/artifacts/kpm_0.2.2_kindlehf-kindlepw2.kpkg",
+            "version": [0, 2, 2],
+            "dependencies": [],
+            "supported_platforms": ["kindlehf", "kindlepw2"]
         }
       ]
     },
